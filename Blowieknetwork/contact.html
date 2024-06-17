@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #444;
+            padding: 1em;
+        }
+        nav a {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            position: relative; /* Ensure position context for icons */
+        }
+        nav a.contact {
+            background-color: #fff;
+            color: #000;
+        }
+        nav a.store {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+        nav a.appeal {
+            background-color: #e74c3c; /* Red */
+            color: #fff;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        nav a.store:hover {
+            background-color: #ffd700;
+        }
+        nav a.appeal:hover {
+            background-color: #c0392b; /* Darker red on hover */
+        }
+        main {
+            padding: 2em;
+            background-color: #fff;
+            margin: 1em auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        .social-buttons {
+            margin-top: 1em;
+            text-align: center; /* Center align social icons */
+        }
+        .social-buttons a {
+            display: inline-block;
+            margin: 0.5em 2em; /* Increased horizontal spacing */
+            transition: background-color 0.3s;
+            position: relative; /* Ensure position context for icons */
+        }
+        .social-buttons a .icon {
+            width: 60px; /* Adjust icon size as needed */
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="store.html" class="store">Store</a>
+        <a href="appeal.html" class="appeal">Appeal</a>
+        <a href="contact.html" id="contactButton" class="contact">Contact</a>
+        <a href="mc.html">MC</a>
+    </nav>
+    <main>
+        <section class="about-section">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions or just want to get in touch, you can reach us on our social media platforms:</p>
+        </section>
+        <section class="join-section">
+            <h2>Follow Us</h2>
+            <div class="social-buttons">
+                <a href="https://www.tiktok.com/@prison_blowiek?_t=8nDZ4M1Z8YC&_r=1" target="_blank">
+                    <img class="icon" src="tiktok-icon.png" alt="TikTok Icon">
+                </a>
+                <a href="https://discord.gg/MSZQmDxAg8" target="_blank">
+                    <img class="icon" src="discord-icon.png" alt="Discord Icon">
+                </a>
+                <a href="https://www.instagram.com/lowiek_staessen?igsh=amx3bmlsNGhyZXNl" target="_blank">
+                    <img class="icon" src="instagram-icon.png" alt="Instagram Icon">
+                </a>
+                <a href="https://www.snapchat.com/add/lowiek_s?share_id=Cyz70Ln_l-c&locale=nl-BE" target="_blank">
+                    <img class="icon" src="snapchat-icon.png" alt="Snapchat Icon">
+                </a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img class="icon" src="youtube-icon.png" alt="YouTube Icon">
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 BlowiekNetwork
+    </footer>
+</body>
+</html>

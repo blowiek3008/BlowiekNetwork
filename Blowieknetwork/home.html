@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #444;
+            padding: 1em;
+        }
+        nav a {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a.home {
+            background-color: #fff;
+            color: #000;
+        }
+        nav a.store {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        nav a.store:hover {
+            background-color: #ffd700;
+        }
+        nav a.appeal {
+            background-color: #e74c3c;
+        }
+        nav a.appeal:hover {
+            background-color: #c0392b;
+        }
+        main {
+            padding: 2em;
+            background-color: #fff;
+            margin: 1em auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+        .about-section, .features-section, .join-section {
+            margin-bottom: 2em;
+        }
+        .about-section h2, .features-section h2, .join-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .about-section p, .features-section p, .join-section p {
+            margin-bottom: 1em;
+        }
+        .join-section a {
+            display: inline-block;
+            padding: 0.5em 1em;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .join-section a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlowiekNetwork</h1>
+    </header>
+    <nav>
+        <a href="home.html" id="homeButton" class="home">Home</a>
+        <a href="about.html">About</a>
+        <a href="store.html" class="store">Store</a>
+        <a href="appeal.html" class="appeal">Appeal</a>
+        <a href="contact.html">Contact</a>
+        <a href="mc.html">MC</a>
+    </nav>
+    <main>
+        <section class="about-section">
+            <h2>About BlowiekNetwork</h2>
+            <p>🌟 Welcome to BlowiekNetwork! 🌟</p>
+            <p>BlowiekNetwork is a vibrant and friendly community for Minecraft enthusiasts of all ages! Whether you're a seasoned builder, an adventurous explorer, or a redstone engineer, our server offers a welcoming space where you can connect, collaborate, and create.</p>
+        </section>
+
+        <section class="features-section">
+            <h2>Server Features</h2>
+            <p>Explore our exciting features:</p>
+            <ul>
+                <li>Survival World: Embark on epic adventures in our survival world where you can gather resources, build homes, and survive the night!</li>
+                <li>Mini-Games: Take a break from building and enjoy a variety of fun mini-games like BedWars, Spleef, and Parkour.</li>
+                <li>Economy System: Trade with other players, buy and sell items, and become the richest player in BlowiekNetwork!</li>
+                <li>Events & Contests: Participate in regular events and building contests to win amazing prizes and showcase your skills.</li>
+                <li>Friendly Staff: Our dedicated team of moderators and admins are always here to help and ensure a positive experience for everyone.</li>
+            </ul>
+        </section>
+
+        <section class="join-section">
+            <h2>Join Us</h2>
+            <p>Ready to join the adventure? Click the invite link below to become a part of BlowiekNetwork and start your Minecraft journey with us!</p>
+            <a href="https://discord.gg/MSZQmDxAg8" target="_blank">🔗 Join our Discord Server</a>
+            <p>See you in BlowiekNetwork! 🌟</p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 BlowiekNetwork
+    </footer>
+    <script>
+        document.getElementById('homeButton').addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent the default link behavior
+            this.style.color = '#000';
+        });
+    </script>
+</body>
+</html>

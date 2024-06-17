@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appeal Form</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes at least the full height of the viewport */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 2.45em 0;
+            text-align: center;
+            margin-bottom: 0px; /* Added margin bottom for separation */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em; /* Adjusted font size to match other pages */
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #444;
+            padding: 1em;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav a.store {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+
+        nav a:hover {
+            background-color: #666;
+        }
+
+        nav a.store:hover {
+            background-color: #ffd700;
+        }
+
+        nav a.appeal {
+            background-color: red;
+            color: #000;
+        }
+
+        main {
+            flex: 1; /* Ensure main section takes up remaining space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 2em;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 800px;
+            text-align: left;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px; /* Added margin bottom */
+            width: 100%;
+        }
+
+        .content h2 {
+            margin-bottom: 20px;
+        }
+
+        .content form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .content input,
+        .content textarea,
+        .content select {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            resize: none; /* Prevent resizing */
+        }
+
+        .content button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .content button:hover {
+            background-color: #555;
+        }
+
+        .content .rules-section {
+            margin-top: 20px;
+            border-top: 2px solid #ccc;
+            padding-top: 20px;
+        }
+
+        .content .rules-section h3 {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .content .rules-section p {
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .rules-section .spacer {
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+        .content p.warning {
+            color: red;
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 1.1em;
+            margin-bottom: 10px; /* Optional: Adjust spacing as needed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Appeal Form</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="store.html" class="store">Store</a>
+        <a href="appeal.html" id="appealButton" class="appeal">Appeal</a>
+        <a href="contact.html">Contact</a>
+        <a href="mc.html">MC</a>
+    </nav>
+    <main>
+        <div class="content">
+            <h2>Submit Your Appeal</h2>
+            <p style="color: red; font-weight: bold; text-decoration: underline; font-size: 2em;">
+                DO THIS ONLY IF YOU ARE BANNED!
+            </p>
+            <div class="rules-section">
+                <h3>RULES:</h3>
+                <p>Submitting a proper Appeal</p>
+                <p>➤ Use proper grammar.</p>
+                <p>➤ Be honest.</p>
+                <p>➤ Provide as much information and details as possible.</p>
+                <p>➤ Admit to your wrong-doings, if any.</p>
+                <p>Rules</p>
+                <p>➤ Do not create joke appeals.</p>
+                <p>➤ Do not submit another appeal if you have one pending.</p>
+                <p>➤ Do not ask a Staff Member to accept your appeal. Asking a staff member to accept your appeal will result in an instant denial.</p>
+                <p class="spacer"></p>
+                <!-- Empty paragraph for spacing -->
+                <p style="font-style: italic; color: red; font-size: 0.9em;">
+                    Please make sure you follow the rules stated above, otherwise your access to the appeals may be removed.
+                </p>
+            </div>
+            <form id="appealForm">
+                <label for="username">Minecraft Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="altAccounts">Do you have any alt accounts?</label>
+                <select id="altAccounts" name="altAccounts" required>
+                    <option value="">Select one...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="whyAppeal">Why should we lift this punishment?</label>
+                <textarea id="whyAppeal" name="whyAppeal" rows="4" required></textarea>
+
+                <label for="extraInfo">Extra Information:</label>
+                <textarea id="extraInfo" name="extraInfo" rows="4"></textarea>
+
+                <button type="submit">Submit Appeal</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 BlowiekNetwork
+    </footer>
+    <script>
+        document.getElementById('appealForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const username = document.getElementById('username').value;
+    const altAccounts = document.getElementById('altAccounts').value;
+    const whyAppeal = document.getElementById('whyAppeal').value;
+    const extraInfo = document.getElementById('extraInfo').value;
+
+    const webhookURL = 'https://discord.com/api/webhooks/1251899686441193524/ZGuQzDVI2kNdx6FIAhGGvYTS9P1c6d0hRQ0TJ-w2gvPWmdkFpz5B77CQNsBqGzYA3Jhx'; // Replace with your Discord webhook URL
+
+    const message = {
+        username: "Appeal Bot",
+        avatar_url: "https://example.com/appeal-bot-avatar.png",
+        content: `**New Appeal Submitted**\n\n**Minecraft Username:** ${username}\n**Alt Accounts:** ${altAccounts}\n**Why should we lift this punishment?:** ${whyAppeal}\n**Extra Information:** ${extraInfo}`
+    };
+
+    // Get the current timestamp and the timestamp of the last submission
+    const now = new Date().getTime();
+    const lastSubmission = localStorage.getItem('lastSubmission') ? parseInt(localStorage.getItem('lastSubmission')) : 0;
+    const oneWeek = 7 * 24 * 60 * 60 * 1000;
+
+    if (now - lastSubmission < oneWeek) {
+        alert('You can only submit one appeal every week. Please try again later.');
+        return;
+    }
+
+    fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(message)
+    }).then(response => {
+        if (response.ok) {
+            localStorage.setItem('lastSubmission', now);
+            window.location.href = 'submit_appeal.html'; // Redirect to the confirmation page
+        } else {
+            alert('There was an error submitting your appeal. Please try again.');
+        }
+    }).catch(error => {
+        console.error('Error:', error);
+        alert('There was an error submitting your appeal. Please try again.');
+    });
+});
+    </script>
+</body>
+</html>

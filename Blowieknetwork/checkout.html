@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes at least the full height of the viewport */
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1.2em 0;
+            text-align: center;
+            font-size: 1.5em;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .confirmation {
+            background-color: #fff;
+            padding: 2em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .confirmation h2 {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        .confirmation p {
+            margin-bottom: 0.5em;
+            color: #666;
+        }
+
+        .confirmation .product-details {
+            margin-bottom: 1em;
+        }
+
+        .confirmation .button-container {
+            margin-top: 2em;
+        }
+
+        .confirmation button {
+            padding: 0.5em 1em;
+            background-color: #ffeb3b;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .confirmation button:hover {
+            background-color: #ffd700;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+
+    <main>
+        <div class="confirmation">
+            <h2>Order Summary</h2>
+
+            <div class="product-details">
+                <p>Product Name: <strong id="productName"></strong></p>
+                <p>Price: <strong id="productPrice"></strong></p>
+                <p>Quantity: <strong id="productQuantity">1</strong></p>
+                <p>Total Price: <strong id="totalPrice"></strong></p>
+            </div>
+
+            <div class="button-container">
+                <button id="confirmButton">Confirm Purchase</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 BlowiekNetwork
+    </footer>
+
+    <!-- JavaScript to handle product details and checkout -->
+    <script>
+        // Retrieve query parameter for product ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('product');
+
+        // Dummy product details (replace with actual product data if available)
+        const productData = {
+            '1': { name: 'Product 1', price: '6.05 EUR' },
+            '2': { name: 'Product 2', price: '12.10 EUR' },
+            '3': { name: 'Product 3', price: '24.20 EUR' },
+            '4': { name: 'Product 4', price: '60.50 EUR' },
+            '5': { name: 'Product 5', price: '90.75 EUR' }
+        };
+
+        // Retrieve product details based on productId
+        const product = productData[productId];
+
+        // Update HTML with product details
+        if (product) {
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productPrice').textContent = product.price;
+            document.getElementById('totalPrice').textContent = product.price; // For simplicity, total price equals single product price
+        } else {
+            // Handle case where product ID is invalid or not found
+            console.error('Product not found');
+        }
+
+        // Handle confirmation button click
+        document.getElementById('confirmButton').addEventListener('click', () => {
+            alert(`Message me on discord to buy: staessen_lowiek`);
+            window.location.href = 'store.html'; // Redirect to store page after alert
+        });
+    </script>
+</body>
+</html>

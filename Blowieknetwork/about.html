@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #444;
+            padding: 1em;
+        }
+        nav a {
+            display: inline-block;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+            background-color: #555;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a.about {
+            background-color: #fff;
+            color: #000;
+        }
+        nav a.store {
+            background-color: #ffeb3b;
+            color: #333;
+        }
+        nav a:hover {
+            background-color: #666;
+        }
+        nav a.store:hover {
+            background-color: #ffd700;
+        }
+        nav a.appeal {
+            background-color: #e74c3c;
+        }
+        nav a.appeal:hover {
+            background-color: #c0392b;
+        }
+        main {
+            padding: 2em;
+            background-color: #fff;
+            margin: 1em auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+        .about-section {
+            margin-bottom: 2em;
+        }
+        .about-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .about-section p {
+            margin-bottom: 1em;
+        }
+        .about-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .about-section ul li {
+            margin-bottom: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BlowiekNetwork</h1>
+    </header>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html" id="aboutButton" class="about">About</a>
+        <a href="store.html" class="store">Store</a>
+        <a href="appeal.html" class="appeal">Appeal</a>
+        <a href="contact.html">Contact</a>
+        <a href="mc.html">MC</a>
+    </nav>
+    <main>
+        <section class="about-section">
+            <h2>About Us</h2>
+            <p>🌟 Welcome to Blowiek Network! 🌟</p>
+            <p>Founded in 2024, Blowiek Network is a premier Minecraft server dedicated to providing an immersive and enjoyable gaming experience for players of all ages and skill levels. Our community is built on the pillars of creativity, collaboration, and fun. We strive to create a dynamic and welcoming environment where players can explore, build, and connect with others.</p>
+            <h3>Our Mission</h3>
+            <p>At Blowiek Network, our mission is to create the ultimate Minecraft experience. We aim to provide a platform where players can unleash their creativity, engage in exciting gameplay, and build lasting friendships. Our server is designed to cater to a variety of playstyles, ensuring that there is something for everyone.</p>
+            <h3>What We Offer</h3>
+            <ul>
+                <li><strong>Diverse Game Modes:</strong> Whether you prefer survival, creative, or minigames, Blowiek Network has something to offer. Our server features a variety of game modes to suit different interests and playstyles. From building magnificent structures in Creative mode to battling it out in PvP arenas, there's always something exciting to do.</li>
+                <li><strong>Custom Features:</strong> We pride ourselves on offering unique and custom features that enhance the Minecraft experience. Our dedicated development team works tirelessly to introduce new plugins, mods, and events that keep the gameplay fresh and engaging.</li>
+                <li><strong>Strong Community:</strong> At Blowiek Network, community is everything. We foster a friendly and inclusive environment where players can make new friends, join clans, and participate in community events.</li>
+                <li><strong>Quality Support:</strong> Our staff team is committed to ensuring that every player has a smooth and enjoyable experience on our server. We offer responsive and helpful support to address any issues or questions that may arise.</li>
+                <li><strong>Innovation:</strong> We continuously seek to improve and innovate, bringing new features and experiences to our server to keep gameplay exciting.</li>
+            </ul>
+            <p>🌟 Welcome to Blowiek Network! 🌟</p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2024 BlowiekNetwork
+    </footer>
+    <script>
+        document.getElementById('aboutButton').addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent the default link behavior
+            this.style.color = '#000';
+        });
+    </script>
+</body>
+</html>
